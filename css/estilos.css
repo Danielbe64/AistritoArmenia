@@ -1,0 +1,155 @@
+/*--------------------------------------------  PRINCIPAL  ----------------------------------------------- */
+*{
+	padding: 0px;
+	margin: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.element{
+	padding: 20px;
+}
+
+
+/*---------------------------------------------------------------------------------------------------- */
+/*------------------------------------------  PAGINA MENÚ  ------------------------------------------- */
+.menu_bar{
+	display: none; 	/* oculta el bóton del menu responcil*/
+}
+.MenuPrincipal{
+	background: #3A75F5;
+}
+nav{
+	z-index: 1000; /* Posicional el menú por encima de todos los elementos */
+	max-width: 1000px;
+	width: 95%;
+	margin: 20px auto; 	/* Permite centrar el menú*/
+}
+nav ul{
+	list-style: none;
+}
+nav ul li{
+	display: inline-block;  
+	position: relative;
+}
+nav ul li:hover{
+	background: #7C7C7C;
+	color: #fff;
+}
+nav ul li a{
+	color: #fff;
+	display: block; 
+	text-decoration: none;
+	padding: 15px 10px;	
+}
+nav ul li a span{
+	margin-right: 7px; 		/* margen izquierda de los iconos */
+}
+nav ul li .caret{
+	position: relative;
+	top: 3px;
+	margin-left: 10px;
+	margin-right: 0px;
+}
+nav ul li .children{
+	display: none;  		/* Oculta los submenu hijos */
+	background: #7C7C7C;
+	color: #fff;
+	border: 1px solid black;
+	position: absolute;		/* Alos submenu seles debe colocar una posición relativa */
+	width: 150%;
+	z-index: 1000;			/* posiciona el meú a la parte superior de los elementos */
+}
+nav ul li:hover .children{
+	display: block;	/* Muestra los submenu hijos */	
+}
+nav ul li:hover .children li{
+	display: block;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+nav ul li:hover .children li a:hover{
+	display: block;
+	background: #fff;
+}
+
+/* ===========================================================================================*/
+@media screen and (max-width: 800px){
+	.element{
+		padding-top: 100px;  /* Deja un amargen a la parte superior del div element	*/
+	}
+	.logo{				/* oculta el logo */
+		width: 80%;
+		position: fixed;
+		right: 100%;
+		margin: 0;
+	}
+	.titulo{				/* oculta el titulo principalñ de la pagina */
+		width: 80%;
+		position: fixed;
+		right: 100%;
+		margin: 0;
+	}
+	.menu_bar{
+		display: block;
+		width: 87%;
+		position: fixed;
+		top: 10;
+		background: #3A75F5;
+	}
+	.menu_bar .btn-menu{
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	.menu_bar span{		/* Alina el botón del menú al lado derecho y lecombia el tamaño*/
+		float: right;
+		font.size: 40px;
+	}
+	nav{				/* oculta el menú principal */
+		width: 80%;
+		height: calc(100% - 80px); /* resta los 80 px del padding superior */
+		position: fixed;
+		left: 	0%;
+		margin: 0;
+		overflow: scroll;
+		
+	}
+	nav ul li{
+		display: block;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	}
+	nav ul li a{
+		display: block;
+	}
+	nav ul li a .children{
+		width: 100%;
+		position: relative;
+	}
+	nav ul li a .children li a{
+		margin-left: 20px;
+	}
+	nav ul li .caret{
+		float: right;
+	}
+
+} /* ends of @media screen */
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------- */
+/*------------------------------------------    ------------------------------------------- */
+
+
+
+/*---------------------------------------------------------------------------------------------------- */
+/*------------------------------------------  FOOTER  ------------------------------------------- */
+footer{
+	background:  #9DDEF5;
+}
